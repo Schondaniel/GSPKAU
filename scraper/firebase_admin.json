@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "grocery-price-tracker-a655d",
+  "private_key_id": "917f4b99edf0eb48ffdaafd8a574848f44a6532d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDmnmFJwliiUCcH\nKx8sOJcdwPdQ9L8j9ScOrZndb9bG4441tmqq93Hp7neo2X9P2YF4q5wrrARoPKUx\nVS6LWWj5H9ma4lWeOoAtH7iYdnlvyAnRPejx/YesXQQ2PYl/0eoPi41JsER1cbEq\njm9Pw1fx5rc4plJ7FRigK9IPnPZIUqbh7kmfBU8qBSVo5TJ/2qTbsXKyncV39BvJ\naCp6vSS/8HtamoE9TsznGAEyVxA4WiTs4J7rlO8Zj3//u7esBdoc1v8opdf0Kwdw\nVkTf4UE+4AiurC3j2tODtxfmp7iMNQ5L+DLsafAyO/UaSvmL6eGtNnhtXmJH7VVa\nXJrwo7glAgMBAAECggEAFw81GSP2qtwq2tuj9U7/RTlbQVwHlLfZnO0c2nhpWF++\ng35m8gtl94chrd95jGlqOb+nEPLVSfruZZ1n1wUsquRVZNhGyVh+IoTud0g5YkT1\nPlfbZ/76xvBSEH5ctkwuBDnm+bxHTBr/JQsy9B3LOGPiZCa1TptQaAuZqHgAZEC2\n0mtFrc4OKgzTgvqvZ5cOY6kRLyP222qgnfz9Gvtwf5Bv0v3N7k2oVxrv0/4IrHZE\nE0lyw6FBAYmgSRDy4kogO1UYdDjcYyjOA0/Kl7ELbA9n/KpDCdgn3j+9JcJ//AcL\nAi0SiVgEFcvGv4nPEA/Wy4BnNTJ2a7pSu9oBeD1rrQKBgQD7dj3CsWnka47lTuEv\nggiRLYsqgw6vSVr79KHMCLDQ1wAfC+4T6rk6tNuVcwqUAGEy1TyPCpt15j2TpXSW\nk01jOjEU/pjeJebJ5DtUhHmTDdr0omVYxXHNIioeyxccAf6en+4MTww5x603IBMq\nlOZi1GbF7SF1Z2W9kXyZv1XZTwKBgQDqx9e+3iW2Sy2kyFIg+8VrlwstGtkd8PjV\nvOHAJqEcl5sabNjZJAiYdME1hryKL1dY7oXcqP368nIU4E3twSJQJyg/Wt74oglI\ncTJD3IhV0eaQ3H05W7KE+nh8qal3rhMAez4ytXzA2q7BSSYWifvsGfc+VYM4WGT2\nW1gKyxKSSwKBgC56F0Yx5mGKo7msT6CpRw4WPd+Yo5EwXLmu6Gy+unePFX2nhdR2\nkM/R97fysGTUgSKVGQFTM5KiAIWWkir2hNovOj0oJXcByFtObMzdQ18zs2F91n+G\n1tbUVrakUNwjXj1RT/1Eav0O8+v5aLF5He/sVCaHAqUhfEOCbWY5YBOvAoGBAJHL\nIb2EA9Us4B44y09yKUlDlYwf5P3D2zIXRfTlyBySRJ3nQ82ro67Qqf5MOh5xgYNX\nM0cwpe9EyPUPyTTAP0eY2VRmYJnzPWJ/8J/VfdAVNWF1mkmZGMWdKF75mKQaM/CT\nl68zplG4OtcKTp2meAtIoJFT1tWRhri5RnYFXvX7AoGBAPWh/VXBSFPvwBmJsvuQ\nVMqWTXTE/uwyM3XlAwlG2N+Rya6v/DKOmG2L78dgqzWjeDQZ/Gvy8YgTxf+qKPCA\n1vpx/e+bERxDMbu/yJArVCFyhFkkLr/02UIe9/rw8W98/ttuq+znsSS7Wr9fscaa\no8VeTP16tyIY4gSoufjcAe1Y\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-6utti@grocery-price-tracker-a655d.iam.gserviceaccount.com",
+  "client_id": "111248844458400018378",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6utti%40grocery-price-tracker-a655d.iam.gserviceaccount.com"
+}
