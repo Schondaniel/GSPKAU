@@ -1,3 +1,4 @@
+#imports for required API's
 from bs4 import BeautifulSoup
 import requests
 import firebase_admin
@@ -6,22 +7,41 @@ from firebase_admin import firestore
 import datetime
 from datetime import datetime
 
-#firebase
+#firebase setup
 cred = credentials.Certificate("firebase_admin.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 time= datetime.now().strftime("%y-%m-%d %H:%M")
 
+#Save function to push data to database
 def save(collection_id, document_id, data):
     db.collection(collection_id).document(document_id).set(data)
 
-#SCRAPE
+#Clear current offers in Database
+def delete_collection(coll_ref, batch_size):
+    docs = coll_ref.limit(batch_size).stream()
+    deleted = 0
+
+    for doc in docs:
+        doc.reference.delete()
+        deleted = deleted + 1
+
+    if deleted >= batch_size:
+        return delete_collection(coll_ref, batch_size)
+
+delete_collection(db.collection("ica"),100)
+print("-------------------------------------------------------")
+print("Succesfully Deleted Old Offers ")
+print("-------------------------------------------------------")
+
+#Collect data from requested URL
 URL = "https://www.ica.se/butiker/maxi/karlstad/maxi-ica-stormarknad-karlstad-11010/erbjudanden/"
 
 response = requests.get(URL)
 page_content = BeautifulSoup(response.content, "html.parser")
 kategorier = page_content.find_all("section", class_="offer-category details open")
 
+#Find product details requested html document
 for x in range(0,len(kategorier)):
     cat_name = kategorier[x].find("header", class_="offer-category__header summary active")
     products = kategorier[x].find_all("div", class_="offer-category__item")
@@ -68,23 +88,8 @@ for x in range(0,len(kategorier)):
         #product_info
         if(product_info is not None):
             info = product_info.text.strip()
-            
-#prints
-        # #namn
-        # # if(product_price_pre is not None):    
-        # print(product_name.text.strip())
-        # # pre price (3 för...osv) 
-        # if(product_price_pre is not None):
-        #     print(product_price_pre.text.strip())
-        # #price
-        # print(price)
-        # # sup price (/kg... osv)
-        # if(product_price_add is not None):
-        #     print(product_price_add.text.strip())
-        # #product_info
-        # if(product_info is not None):
-        #     print(product_info.text.strip())
-        # print("-----")
+
+        #Store collected data    
         data = {
             "store" : "Ica Maxi Bergvik",
             "kategori" : cat,
@@ -95,9 +100,10 @@ for x in range(0,len(kategorier)):
             "decimal": sup,
             "info": info
         }
-     
+        
+        #Function to push collected data onto database
         save(
-            collection_id = "test ica",
+            collection_id = "ica",
             document_id = f"{time}" + " nummer: " + str(x) + ":" + str(i),
             data = data
         )
